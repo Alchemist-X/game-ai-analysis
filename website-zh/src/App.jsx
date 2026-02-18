@@ -6,10 +6,10 @@ import Environment from './components/Environment'
 import VsPioSolver from './components/VsPioSolver'
 
 const tabs = [
-  { id: 'repos', label: 'AI Repos' },
-  { id: 'arch', label: 'DanZero+ Architecture' },
-  { id: 'env', label: 'Environment' },
-  { id: 'vs', label: 'vs PioSolver' },
+  { id: 'repos', label: '开源项目' },
+  { id: 'arch', label: '核心架构' },
+  { id: 'env', label: '环境评估' },
+  { id: 'vs', label: '对比 PioSolver' },
 ]
 
 export default function App() {
@@ -20,9 +20,8 @@ export default function App() {
       <nav className="nav">
         <div className="nav-inner">
           <span style={{ fontWeight: 800, fontSize: 15, marginRight: 12, color: 'var(--accent-light)' }}>
-            GuanDan AI
+            掼蛋 AI
           </span>
-          <a href="./zh/" style={{ marginLeft: 0, marginRight: 8, color: 'var(--text-muted)', fontSize: 13, textDecoration: 'none' }}>中文</a>
           {tabs.map(t => (
             <button
               key={t.id}
@@ -32,14 +31,15 @@ export default function App() {
               {t.label}
             </button>
           ))}
+          <a href="../" style={{ marginLeft: 'auto', color: 'var(--text-muted)', fontSize: 13, textDecoration: 'none' }}>English</a>
         </div>
       </nav>
 
       <div className="app">
         <header className="hero">
-          <div className="hero-badge">DanZero+ Deep Dive</div>
-          <h1>GuanDan AI Research</h1>
-          <p>DanZero+ DQN+PPO Hybrid RL Architecture, Environment Benchmark, PioSolver Comparison</p>
+          <div className="hero-badge">DanZero+ 深度解析</div>
+          <h1>掼蛋 AI 策略研究</h1>
+          <p>DanZero+ DQN+PPO 混合 RL 架构 | 环境基准测试 | PioSolver 对比分析</p>
         </header>
 
         {active === 'repos' && <RepoSurvey />}
