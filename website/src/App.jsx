@@ -4,12 +4,14 @@ import RepoSurvey from './components/RepoSurvey'
 import Architecture from './components/Architecture'
 import Environment from './components/Environment'
 import VsPioSolver from './components/VsPioSolver'
+import Hardware from './components/Hardware'
 
 const tabs = [
   { id: 'repos', label: 'AI Repos' },
   { id: 'arch', label: 'DanZero+ Architecture' },
   { id: 'env', label: 'Environment' },
   { id: 'vs', label: 'vs PioSolver' },
+  { id: 'hw', label: 'Hardware' },
 ]
 
 export default function App() {
@@ -46,6 +48,7 @@ export default function App() {
         {active === 'arch' && <Architecture />}
         {active === 'env' && <Environment />}
         {active === 'vs' && <VsPioSolver />}
+        {active === 'hw' && <Hardware />}
       </div>
     </>
   )

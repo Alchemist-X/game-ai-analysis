@@ -4,12 +4,14 @@ import RepoSurvey from './components/RepoSurvey'
 import Architecture from './components/Architecture'
 import Environment from './components/Environment'
 import VsPioSolver from './components/VsPioSolver'
+import Hardware from './components/Hardware'
 
 const tabs = [
   { id: 'repos', label: '开源项目' },
   { id: 'arch', label: '核心架构' },
   { id: 'env', label: '环境评估' },
   { id: 'vs', label: '对比 PioSolver' },
+  { id: 'hw', label: '硬件需求' },
 ]
 
 export default function App() {
@@ -46,6 +48,7 @@ export default function App() {
         {active === 'arch' && <Architecture />}
         {active === 'env' && <Environment />}
         {active === 'vs' && <VsPioSolver />}
+        {active === 'hw' && <Hardware />}
       </div>
     </>
   )
